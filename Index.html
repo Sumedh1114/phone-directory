@@ -59,6 +59,28 @@
       </div>
       <!-- content-wrapper ends -->
     </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header justify-content-center text-danger">
+                                    <h5 class="modal-title" id="exampleModalLabel">
+                                        <i class="mdi mdi-alert-circle"></i>Alert
+                                    </h5>
+                                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                                </div>
+                                <div class="modal-body justify-content-center text-center text-body">
+                                  Password invalid!!
+                                </div>
+                                <div class="justify-content-center modal-footer text-center">
+                                    <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal"  data-bs-dismiss="modal">
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
     <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->
@@ -84,7 +106,7 @@
         if (email == 'hrmd.admin@rbi.org.in' && password == 'hrmd@123') {
             location.replace("Department.html");
         } else if(email == 'hrmd.admin@rbi.org.in' && password != 'hrmd@123') {
-            alert("Password invalid!!");
+            $("#exampleModal").modal("show");
 
         }
 
